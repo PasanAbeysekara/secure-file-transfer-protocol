@@ -39,6 +39,7 @@ public class CryptoUtils {
     }
 
     public static byte[] rsaEncrypt(byte[] data, Key key) throws Exception {
+        // Use padding for production systems
         Cipher cipher = Cipher.getInstance("RSA/ECB/PKCS1Padding");
         cipher.init(Cipher.ENCRYPT_MODE, key);
         return cipher.doFinal(data);
