@@ -1,0 +1,14 @@
+# JWT Configuration
+# IMPORTANT: This key is for demonstration only. Use a long, secure, randomly generated key in production.
+jwt.secret.key=
+
+# H2 Database Console (for easy debugging of the in-memory database)
+spring.h2.console.enabled=true
+spring.h2.console.path=/h2-console
+
+# JPA / Hibernate Configuration
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+
+# File Storage Location (for the demo local file system storage)
+file.storage.location=./temp-uploads
