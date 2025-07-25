@@ -65,7 +65,7 @@ The application is composed of a Spring Boot backend and a React frontend.
 *   **Spring Boot Backend:** Contains the core protocol logic.
     *   **`REST Controllers`:** Expose API endpoints for authentication (`/api/auth`) and file transfer (`/api/transfers`).
     *   **`JWT Authentication Filter`:** Secures the API endpoints, ensuring only authenticated users can perform transfers.
-    *   **`SecureTransferService`:** Orchestrates the entire protocol, from the initial handshake to the final integrity check.
+    *   **`SecureTransferService`:** Orchestrates the entire protocol. **The core logic of the secure transfer protocol is implemented in this class.** You can find the source code at [`SecureTransferProtocolService.java`](https://github.com/PasanAbeysekara/secure-file-transfer-protocol/blob/dev/backend/src/main/java/com/example/securetransfer/service/SecureTransferProtocolService.java).
     *   **`KeyManagementService`:** Manages user RSA key pairs. For this demo, keys for "Alice" and "Bob" are generated and stored in-memory.
     *   **`CryptoUtils`:** A utility class that handles all cryptographic operations: hashing (SHA-256), RSA and AES encryption/decryption, and digital signatures.
 
